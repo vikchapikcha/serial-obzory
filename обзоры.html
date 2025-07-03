@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Обзоры</title>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #ffffff;
+      font-family: Century Gothic, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1 {
+      color: #00AACC;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .search-container input[type="text"] {
+      padding: 10px;
+      width: 500px;
+      border: none;
+      border-radius: 5px 0 0 5px;
+      background-color: #1a1a1a;
+      color: #ccc;
+      font-size: 16px;
+    }
+
+    .search-container button {
+      padding: 10px 20px;
+      background-color: #00cfff;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .search-container button:hover {
+      background-color: #00aacc;
+    }
+
+    .container {
+      display: flex;
+      align-items: stretch;
+      height: auto;
+    }
+
+    .left {
+      width: 80%;
+      background-image: url('5555.PNG');
+      background-size: 155%;
+      background-repeat: no-repeat;
+      padding: 20px;
+    }
+
+    .separator {
+      width: 2px;
+      background-color: white;
+    }
+
+    .right {
+      width: 20%;
+      padding: 5px;
+    }
+
+    img {
+      margin: 10px;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: #092038;
+      width: 250px;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card-title {
+      padding: 15px;
+      font-size: 18px;
+    }
+
+    .rating {
+      color: #ffd700;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 0.9em;
+      color: #ccc;
+      padding: 0 10px 10px;
+    }
+
+    .button {
+      background-color: #1e90ff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+
+    .button:hover {
+      background-color: #4169e1;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Верхняя панель -->
+  <div style="display: flex; align-items: center; padding: 0px 40px;">
+    <img src="иконка.png" width="140" height="100" style="vertical-align: middle;">
+    <b style="font-size: 25px; margin-left: 500px;">
+      <a href="обзоры.html" style="color: white; text-decoration: none; margin-right: 60px;">ОБЗОРЫ</a> 
+      <a href="подборки.html" style="color: white; text-decoration: none; margin-right: 60px;">ПОДБОРКИ</a> 
+      <a href="#" style="color: white; text-decoration: none; margin-right: 60px;">ОТЗЫВЫ</a> 
+      <a href="#" style="color: white; text-decoration: none;">КОНТАКТЫ</a>
+    </b>
+  </div>
+  <hr color="white" width="100%" style="margin: 0;">
+
+  <!-- Контейнер с двумя частями -->
+  <div class="container" style="display: flex; align-items: stretch; padding-top: 0; margin-top: 0;">
+    <!-- Левая часть -->
+    <div class="left">
+      <h1>ОБЗОРЫ</h1>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Введите название или жанр...">
+        <button onclick="searchCards()">Искать</button>
+      </div>
+      <p>
+        <a href="#" style="color: #00aacc; font-size: 15px; text-decoration: none;">
+          <b><div style="word-spacing:25px;">ДРАМА КОМЕДИЯ ФАНТАСТИКА ТРИЛЛЕР КРИМИНАЛ</div></b>
+        </a>
+      </p>
+      <hr color="#00aacc" width="80%">
+      <br>
+      <div class="cards">
+        <div class="card" data-title="Очень странные дела">
+          <img src="осд2.jpg" alt="Очень странные дела">
+          <div class="card-title">Очень странные дела</div>
+          <div class="rating">★★★★★</div>
+          <p class="description">1980-е годы, тихий провинциальный американский городок. Благоприятное течение местной жизни нарушает загадочное исчезновение подростка...</p>
+          <button class="button">Читать обзор</button>
+        </div>
+        <div class="card" data-title="The Last of US">
+          <img src="tlou2.jpg" alt="The Last of US">
+          <div class="card-title">The Last of US</div>
+          <div class="rating">★★★★★</div>
+          <p class="description">В конце сентября 2003 <br>года по всей планете произошло массовое заражение людей кордицепсом. Прежде паразитировавший только на насекомых...</p>
+          <button class="button">Читать обзор</button>
+        </div>
+        <div class="card" data-title="Ходячие мертвецы">
+          <img src="twd2.jpg" alt="Ходячие мертвецы">
+          <div class="card-title">Ходячие мертвецы</div>
+          <div class="rating">★★★★★</div>
+          <p class="description">Зомби-эпидемия <br>захлестнула планету. <br>Шериф Рик Граймс путешествует с семьёй и небольшой группой <br>выживших в поисках безопасного...</p>
+          <button class="button">Читать обзор</button>
+        </div>
+        <div class="card" data-title="Лучше звоните Солу">
+          <img src="лзс.jpeg" alt="Лучше звоните Солу">
+          <div class="card-title">Лучше звоните Солу</div>
+          <div class="rating">★★★★★</div>
+          <p class="description">История об испытаниях и невзгодах, которые приходится преодолеть <br>Солу Гудману, адвокату <br>по уголовным делам, <br>в тот период, когда он пытается...</p>
+          <button class="button">Читать обзор</button>
+        </div>
+<div class="card" data-title="Остаться в живых">
+          <img src="овж.jpeg" alt="Остаться в живых">
+          <div class="card-title">Остаться в живых</div>
+          <div class="rating">★★★★★</div>
+          <p class="description">Красавец-лайнер, совершающий полет из Сиднея в Лос-Анджелес, неожиданно терпит крушение. 48 пассажиров оказываются на пустынном острове посреди океана. Люди в...</p>
+          <button class="button">Читать обзор</button>
+        </div>
+<div class="card" data-title="Игра в кальмара">
+          <img src="ивк.jpg" alt="Игра в кальмара">
+          <div class="card-title">Игра в кальмара</div>
+          <div class="rating">★★★★★</div>
+          <p class="description">Сон Ги-хун уже немолод, разведён, по уши погряз в долгах и сидит на шее у старенькой матери. Даже выигранные на скачках <br>деньги в его руках долго не задер...</p>
+          <button class="button">Читать обзор</button>
+        </div>
+<div class="card" data-title="Шершни">
+          <img src="шер.jpeg" alt="Шершни">
+          <div class="card-title">Шершни</div>
+          <div class="rating">★★★★★</div>
+          <p class="description">Женская школьная команда по футболу терпит крушение на самолёте в лесах <br>Онтарио. Пока идут поиски, с выживших медленно слезает налёт цивилизации. Из слаже....</p>
+          <button class="button">Читать обзор</button>
+        </div>
+<div class="card" data-title="Я – зомби">
+          <img src="зомб.jpg" alt="Я – зомби">
+          <div class="card-title">Я – зомби</div>
+          <div class="rating">★★★★★</div>
+          <p class="description">Для студентки медицинского факультета Оливия Мур последствия одной из вечеринок стали переломным моментом в жизни, превратившим её в зомби. Жизнерадостная, акти...</p>
+          <button class="button">Читать обзор</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="right">
+      <h2 style="color: orangered;">ОЖИДАЕМЫЕ НОВИНКИ</h2>
+      <br>
+      <img src="больница.jpg" width="250" height="300">
+      <p><b><i>Больница Питт</i>: Дата выхода, трейлер, актерский состав и многое другое</b></p>
+      <p style="color: grey;"><b>Апрель 25, 2025</b></p>
+      <img src="0.jpg" width="250" height="300">
+      <p><b><i>Нулевой день</i>: Сериал находился в разработке около трех лет — впервые о нем заговорили в ноябре 2022 года</b></p>
+      <p style="color: grey;"><b>Апрель 25, 2025</b></p>
+      <img src="студия.jpg" width="250" height="300">
+      <p><b><i>Студия</i>: Премьера: Apple TV+ — c 26 марта</b></p>
+      <p style="color: grey;"><b>Март 15, 2025</b></p>
+    </div>
+  </div>
+
+   <script>
+    function searchCards() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const cards = document.getElementsByClassName('card');
+
+      for (let card of cards) {
+        const title = card.getAttribute('data-title').toLowerCase();
+        if (title.includes(input)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Подборки</title>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #ffffff;
+      font-family: Century Gothic, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1 {
+      color: #00AACC;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .search-container input[type="text"] {
+      padding: 10px;
+      width: 500px;
+      border: none;
+      border-radius: 5px 0 0 5px;
+      background-color: #1a1a1a;
+      color: #ccc;
+      font-size: 16px;
+    }
+
+    .search-container button {
+      padding: 10px 20px;
+      background-color: #00cfff;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .search-container button:hover {
+      background-color: #00aacc;
+    }
+
+    .container {
+      display: flex;
+      align-items: stretch;
+      height: auto;
+    }
+
+    .left {
+      width: 80%;
+      background-image: url('5555.PNG');
+      background-size: 155%;
+      background-repeat: no-repeat;
+      padding: 20px;
+    }
+
+    .separator {
+      width: 2px;
+      background-color: white;
+    }
+
+    .right {
+      width: 20%;
+      padding: 5px;
+    }
+
+    img {
+      margin: 10px;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 50px;
+flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: #092038;
+      width: 250px;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card-title {
+      padding: 15px;
+      font-size: 18px;
+    }
+.button {
+      background-color: #1e90ff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+
+    .button:hover {
+      background-color: #4169e1;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Верхняя панель -->
+  <div style="display: flex; align-items: center; padding: 0px 40px;">
+    <img src="иконка.png" width="140" height="100" style="vertical-align: middle;">
+    <b style="font-size: 25px; margin-left: 500px;">
+      <a href="обзоры.html" style="color: white; text-decoration: none; margin-right: 60px;">ОБЗОРЫ</a> 
+      <a href="подборки.html" style="color: white; text-decoration: none; margin-right: 60px;">ПОДБОРКИ</a> 
+      <a href="#" style="color: white; text-decoration: none; margin-right: 60px;">ОТЗЫВЫ</a> 
+      <a href="#" style="color: white; text-decoration: none;">КОНТАКТЫ</a>
+    </b>
+  </div>
+  <hr color="white" width="100%" style="margin: 0;">
+
+  <!-- Контейнер с двумя частями -->
+  <div class="container" style="display: flex; align-items: stretch; padding-top: 0; margin-top: 0;">
+    <!-- Левая часть -->
+    <div class="left">
+      <h1>ПОДБОРКИ</h1>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Введите название или жанр...">
+        <button onclick="searchCards()">Искать</button>
+      </div>
+      <p>
+        <a href="#" style="color: #00aacc; font-size: 15px; text-decoration: none;">
+          <b><div style="word-spacing:25px;">ДРАМА КОМЕДИЯ ФАНТАСТИКА ТРИЛЛЕР КРИМИНАЛ</div></b>
+        </a>
+      </p>
+      <hr color="#00aacc" width="80%">
+      <br>
+      <div class="cards">
+        <div class="card" data-title="Мини-сериалы">
+          <img src="север.jpg" alt="Мини-сериалы">
+          <div class="card-title">Мини-сериалы</div>
+<br>
+<button class="button">Подробнее</button>
+        </div>
+        <div class="card" data-title="Сериал в жанре">
+          <img src="ИП.jpg" alt="Сериал в жанре">
+          <div class="card-title">Сериал в жанре</div> <br>
+<button class="button">Подробнее</button>
+        </div>
+        <div class="card" data-title="Фантастические сериалы">
+          <img src="сверх.jpg" alt="Фантастические сериалы">
+          <div class="card-title">Фантастические сериалы</div>
+<button class="button">Подробнее</button>
+        </div> 
+<div class="card" data-title="Комедийные сериалы">
+          <img src="друзья.jpg" alt="Комедийные сериалы">
+          <div class="card-title">Комедийные <br>сериалы</div>
+<button class="button">Подробнее</button>
+      </div>
+<div class="card" data-title="Постапокалиптические сериалы">
+          <img src="нация.jpg" alt="Постапокалиптические сериалы">
+          <div class="card-title">Постапокалиптические сериалы</div>
+<button class="button">Подробнее</button>
+      </div>
+<div class="card" data-title="Сериалы про выживание">
+          <img src="lost.jpg" alt="Сериалы про выживание">
+          <div class="card-title">Сериалы про выживание</div>
+<button class="button">Подробнее</button>
+      </div>
+<div class="card" data-title="Сериалы про маньяков">
+          <img src="кан.jpg" alt="Сериалы про маньяков">
+          <div class="card-title">Сериалы про маньяков</div><br>
+<button class="button">Подробнее</button>
+      </div>
+<div class="card" data-title="Дорамы">
+          <img src="дор.jpg" alt="Дорамы">
+          <div class="card-title">Дорамы</div><br>
+<button class="button">Подробнее</button>
+      </div>
+<div class="card" data-title="Российские сериалы">
+          <img src="фиш.jpg" alt="Российские сериалы">
+          <div class="card-title">Российские сериалы</div><br>
+<button class="button">Подробнее</button>
+      </div>
+<div class="card" data-title="Аниме">
+          <img src="аним.jpeg" alt="Аниме">
+          <div class="card-title">Аниме</div><br>
+<button class="button">Подробнее</button>
+      </div>
+<div class="card" data-title="Лучшие сериалы про ВОВ">
+          <img src="вов.png" alt="Лучшие сериалы про ВОВ">
+          <div class="card-title">Лучшие сериалы про ВОВ</div>
+<button class="button">Подробнее</button>
+      </div>
+<div class="card" data-title="Восточные страсти">
+          <img src="пвд.jpeg" alt="Восточные страсти">
+          <div class="card-title">Восточные страсти</div><br>
+<button class="button">Подробнее</button>
+      </div>
+</div>
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="right">
+      <h2 style="color: orangered;">ОЖИДАЕМЫЕ НОВИНКИ</h2>
+      <br>
+      <img src="больница.jpg" width="250" height="300">
+      <p><b><i>Больница Питт</i>: Дата выхода, трейлер, актерский состав и многое другое</b></p>
+      <p style="color: grey;"><b>Апрель 25, 2025</b></p>
+      <img src="0.jpg" width="250" height="300">
+      <p><b><i>Нулевой день</i>: Сериал находился в разработке около трех лет — впервые о нем заговорили в ноябре 2022 года</b></p>
+      <p style="color: grey;"><b>Апрель 25, 2025</b></p>
+      <img src="студия.jpg" width="250" height="300">
+      <p><b><i>Студия</i>: Премьера: Apple TV+ — c 26 марта</b></p>
+      <p style="color: grey;"><b>Март 15, 2025</b></p>
+    </div>
+  </div>
+
+  <script>
+    function searchCards() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const cards = document.getElementsByClassName('card');
+
+      for (let card of cards) {
+        const title = card.getAttribute('data-title').toLowerCase();
+        if (title.includes(input)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      }
+    }
+  </script>
+</body>
+</html>
